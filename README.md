@@ -69,6 +69,15 @@ dot.render("test_graphviz", format="png")
 
 Currently the library depends on [Pydantic](https://docs.pydantic.dev/latest/) for schema and [LiteLLM](https://docs.litellm.ai/) for calling LLMs, as well as [Graphviz](https://graphviz.org/) for visualization.
 
+## Roadmap
+
+- [ ] Support streaming, liking using standard asyncio
+- [ ] Turn a Union into tool calls
+- [ ] Easy patterns for running steps in parallel
+- [ ] Callbacks
+- [ ] Persistence
+- [ ] Integration with observability tools such as LangSmith and Weave
+
 ## Example
 
 ```python
