@@ -4,7 +4,7 @@ Agent Steps is a work-in-progress, experimental library for building LLM agent w
 
 It lets you write LLM agent workflows using normal Python code, without needing to use an explicit DSL (e.g. creating graphs or explicit chains), while still being able to leverage a runtime layer that can provide controllability, persistence, introspection, and other tooling.
 
-You write code like normal but can have the features of an agent framework through the use of a [Runtime](#running-workflows).
+You write code like normal but can have the features of an agent framework through the use of a [Runtime](#running-workflows). Through the use of decorators and Runtime, many of the features of agent frameworks can likely be replicated, but with the expressiveness of typical Python code.
 
 Writing ordinary, non-DSL Python code can be more natural than writing graph-oriented code, and it can be easier to debug and reason about.
 
