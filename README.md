@@ -19,6 +19,8 @@ def create_recipe(query: str) -> Recipe:
         return improved_recipe
 ```
 
+## LLM calls
+
 Steps that call LLMs are decorated with `@step(model="...")`, where the model parameter is a string that specifies the model to use for that step. The return value of the decorated function is a user prompt message, while any docstring is used as the system prompt, taking inspiration from [ell](https://github.com/MadcowD/ell):
 
 ```python
@@ -30,7 +32,9 @@ def draft_recipe(query: str) -> Recipe:
 
 The return type annotation is used as the output schema for the LLM call.
 
-To run the pipeline, a Runtime is provided as context:
+## Running workflows
+
+To run the pipeline, a Runtime is provided as context, and then the root step is called as a normal function:
 
 ```python
 with Runtime():
@@ -38,6 +42,8 @@ with Runtime():
 ```
 
 The runtime manages the execution of steps, keeps track of the results, and provides a logging function. In the future, it can provide callbacks, tooling, and other controllability features.
+
+## Visualizing workflows
 
 The graph of steps (statically, rather than at runtime) can be visualized using `graph_to_dotviz`:
 
@@ -50,6 +56,8 @@ dot.render("test_graphviz", format="png")
 ```
 
  <img src="./assets/example-graph.png" alt="Example graph" width="200px">
+
+## Dependencies
 
 Currently the library depends on [Pydantic](https://docs.pydantic.dev/latest/) for schema and [LiteLLM](https://docs.litellm.ai/) for calling LLMs, as well as [Graphviz](https://graphviz.org/) for visualization.
 
