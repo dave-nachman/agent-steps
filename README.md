@@ -6,7 +6,7 @@ It lets you write LLM agent workflows using normal Python code, without needing 
 
 You write code like normal but can have the features of an agent framework through the use of a [Runtime](#running-workflows).
 
-Writing every day, non-DSL Python code can be more natural than writing graph-oriented code, and it can be easier to debug and reason about.
+Writing ordinary, non-DSL Python code can be more natural than writing graph-oriented code, and it can be easier to debug and reason about.
 
 ## Creating a workflow
 
