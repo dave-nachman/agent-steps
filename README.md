@@ -74,7 +74,7 @@ Currently the library depends on [Pydantic](https://docs.pydantic.dev/latest/) f
 - [ ] Support streaming, liking using standard asyncio
 - [ ] Turn a Union into tool calls
 - [ ] Easy patterns for running steps in parallel
-- [ ] Callbacks
+- [ ] Callbacks / hooks into the execution, supporting middleware, etc
 - [ ] Persistence
 - [ ] Integration with observability tools such as LangSmith and Weave
 
