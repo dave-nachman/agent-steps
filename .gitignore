@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Poetry
+.venv/
+poetry.lock
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Project-specific
+*.log
+*.sqlite3
+
+
+# Pytest
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# Ruff
+.ruff_cache/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
