@@ -4,6 +4,10 @@ Agent Steps is a work-in-progress, experimental library for building LLM agent w
 
 It lets you write LLM agent workflows using normal Python code, without needing to use an explicit DSL (e.g. creating graphs or explicit chains), while still being able to leverage a runtime layer that can provide controllability, persistence, introspection, and other tooling.
 
+Writing normal Python code can be more natural than writing graph-oriented code, and it can be easier to debug and reason about.
+
+## Creating a workflow
+
 Workflows can be created using normal Python functions (including conditionals and for loops), but are decorated with `@step`:
 
 ```python
@@ -18,6 +22,8 @@ def create_recipe(query: str) -> Recipe:
     else:
         return improved_recipe
 ```
+
+A workflow step can call other steps as well as normal functions, and it can also call itself or other steps cyclically.
 
 ## LLM calls
 
