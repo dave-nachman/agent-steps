@@ -74,7 +74,7 @@ from typing import Optional
 
 from pydantic import BaseModel
 
-from agent_steps import step
+from agent_steps import step, Runtime
 
 
 class Recipe(BaseModel):
@@ -116,4 +116,8 @@ def create_recipe(query: str):
         return create_recipe(query)
 
     return improved_recipe
+
+
+with Runtime():
+    create_recipe("chicken parmesan")
 ```
