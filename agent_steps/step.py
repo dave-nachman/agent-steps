@@ -15,6 +15,9 @@ class Step:
 
     def __call__(self, *args, **kwargs):
         runtime = _runtime.get()
+        if not runtime:
+            raise ValueError("Not running in a runtime context")
+
         runtime._invocations[self.fn.__name__] += 1
 
         if self.max_loops and runtime._invocations[self.fn.__name__] > self.max_loops:

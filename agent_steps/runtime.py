@@ -82,6 +82,10 @@ class Runtime:
 
 @contextmanager
 def runtime(logging_fn=None):
+    existing_runtime = _runtime.get(None)
     r = Runtime(logging_fn)
     _runtime.set(r)
-    yield _runtime.get()
+    try:
+        yield _runtime.get()
+    finally:
+        _runtime.set(existing_runtime)
